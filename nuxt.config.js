@@ -39,6 +39,15 @@ export default {
     '@nuxtjs/pwa',
   ],
 
+  // https://typescript.nuxtjs.org/guide/lint/
+  typescript: {
+    typeCheck: {
+      eslint: {
+        files: './**/*.{ts,js,vue}',
+      },
+    },
+  },
+
   // PWA module configuration: https://go.nuxtjs.dev/pwa
   pwa: {
     manifest: {
