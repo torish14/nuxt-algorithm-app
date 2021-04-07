@@ -37,6 +37,23 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
+    // https://firebase.nuxtjs.org/guide/getting-started
+    [
+      '@nuxtjs/firebase',
+      {
+        config: {
+          apiKey: 'AIzaSyAbAjz6opeJXhYpp5D2qH4dtHzmuT1IWTg',
+          authDomain: 'nuxt-algorithm-app.firebaseapp.com',
+          projectId: 'nuxt-algorithm-app',
+          storageBucket: 'nuxt-algorithm-app.appspot.com',
+          messagingSenderId: '289822339274',
+          appId: '1:289822339274:web:4f1f14d6c94f7271438433',
+        },
+        services: {
+          firestore: true, // Just as example. Can be any other service.
+        },
+      },
+    ],
   ],
 
   // https://typescript.nuxtjs.org/guide/lint/
