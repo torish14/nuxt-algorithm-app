@@ -4,6 +4,7 @@ export default class Searcher {
     const result = { count: 1, ticket: null }
     for (const ticket of tickets) {
       if (ticket.id === target) {
+        result.ticket = ticket
         return result
       }
       result.count++
@@ -13,7 +14,7 @@ export default class Searcher {
 
   // 二分探索
   static binarySearch(tickets: string | any[], target: number) {
-    if (tickets.length === 0) {
+    if (tickets.length <= 0) {
       return null
     }
     const result = { count: 1, ticket: null }
