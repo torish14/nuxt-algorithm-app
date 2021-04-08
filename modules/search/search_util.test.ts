@@ -1,6 +1,5 @@
 import ticketGenerator from './search_util'
 
-// @ts-ignore
 test('test ticketGenerator', () => {
   // ticketGenerator を実際に動かして結果を res に入れる
   const res = ticketGenerator(10)
@@ -52,10 +51,8 @@ test('test ticketGenerator', () => {
 
   // 先程作成したチケットの配列と id が一致するか比較する
   res.forEach((r, i) => {
-    // @ts-ignore
     expect(r.id).toEqual(expected[i].id)
   })
   // 結果の配列の長さが同じか検証する
-  // @ts-ignore
   expect(res.length).toEqual(10)
 })
